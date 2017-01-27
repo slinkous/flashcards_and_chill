@@ -1,5 +1,5 @@
-get '/users/new' do
-  erb :'users/new'
+get '/users/register' do
+  erb :'users/register'
 end
 
 post '/users' do
@@ -7,11 +7,11 @@ post '/users' do
   if @user.save
     redirect :"/users/#{@user.id}"
   else
-    erb :'users/new' #error handling?
+    erb :'users/register' #error handling?
   end
 end
 
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
-  erb :'users/show'
+  erb :'users/profile'
 end
