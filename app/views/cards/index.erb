@@ -1,0 +1,9 @@
+<h2>Look at all these flashcards!</h2>
+<% @cards.each do |card| %>
+<br>
+	<table>
+		<tr><%= card.question %></tr>
+		<tr><%= card.answer %></tr>
+	</table>
+<br>
+<% end %>

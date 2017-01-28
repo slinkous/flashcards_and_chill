@@ -1,0 +1,11 @@
+<h2>Change a card!</h2>
+<form action="/cards" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" name="question" value="<%= @card.question %>">
+	<input type="text" name="answer" value="<%= @card.answer %>">
+	<input type="submit" value="This is what my card should say!">
+</form>
+<form action="/cards" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Nah, delete that thing">
+</form>
