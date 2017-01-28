@@ -1,0 +1,10 @@
+<h2>Edit that deck!</h2>
+<form action="/decks/<% @deck.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" name="deck[title]" value='<% @deck.try(:title)%>' >
+	<input type="submit" value="Fix my deck!">
+</form>
+<form action="/decks" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Nah, delete that thing">
+</form>
