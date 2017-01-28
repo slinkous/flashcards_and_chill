@@ -1,6 +1,8 @@
 <h2>It's all about the decks!</h2>
-<table>
+<ul>
 <% @decks.each do |deck| %>
-<tr><%= deck.title %></tr>
+<li><a href='/deck/<% deck.id %>'>
+<%= @deck.title %></a>
+</li>
 <% end %>
-</table>
+</ul>
