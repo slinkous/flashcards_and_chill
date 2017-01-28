@@ -1,4 +1,8 @@
 <h2><%= @deck.title %></h2>
 <p>
-<% erb :'cards/index' %>
+<% @cards = @deck.cards %>
+<% @cards.each do |card| %>
+<%	@card = card %>
+<%=  erb :'cards/show' %>
+<% end %>
 </p>
