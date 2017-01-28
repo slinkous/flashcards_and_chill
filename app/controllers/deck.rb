@@ -39,7 +39,7 @@ put '/decks/:id' do
   @deck.assign_attributes(params[:deck])
 
   if @deck.save
-    redirect '/decks/:id'
+    redirect '/decks'
   else
     erb :'decks/edit'
   end
