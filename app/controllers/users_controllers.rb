@@ -7,7 +7,7 @@ post '/users' do
   if @user.save
     redirect :"/users/#{@user.id}"
   else
-    erb :'users/register' #error handling?
+    erb :'users/register' 
   end
 end
 
