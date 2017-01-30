@@ -1,0 +1,15 @@
+The Deck: <%= @round.deck.title %>
+<table>
+<tr>
+<th>Questions in Deck</th>
+<th>Questions Answered</th>
+<th>Questions Correct</th>
+</tr>
+<tr>
+<td><%= @round.deck.cards.length %></td>
+<td><%= @round.answered %></td>
+<td><%= @round.correct %></td>
+</tr>
+</table>
+
+
