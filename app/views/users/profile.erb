@@ -1,6 +1,19 @@
 <h1>Welcome to your profile!</h1>
-  <p> Here are the stats from your previous sessions </p>
-
+  <p> Here are the stats from your previous sessions </p> 
+  <% if @rounds %>
+<ul><% @rounds.each do |round| %>
+<li><%= round.deck.title %>
+	<ul>
+	<li> Total Questions: <%= round.deck.length %></li>
+	<li> Total Answered: <%= round.answered %></li>
+	<li> Total Correct: <%= round.correct %></li>
+	</ul>
+</li>
+<% end %>
+</ul>
+<% else %>
+<h2>No Rounds</h2>
+<% end %>
   <!-- erb nonsense  -->
 
 

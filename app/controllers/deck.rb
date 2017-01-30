@@ -1,7 +1,7 @@
 # shows all decks
 get "/decks" do
   @decks = Deck.all
-  erb :'/decks/index'
+  erb :'decks/index'
 end
 
 
@@ -24,6 +24,7 @@ end
 #shows one deck, with all it's cards
 get '/decks/:id' do
   @deck = Deck.find(params[:id])
+  @cards = @deck.cards
   erb :'decks/show'
 end
 
