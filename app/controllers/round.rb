@@ -22,6 +22,4 @@ end
 get '/rounds/:id' do
 	@round = Round.find(:id)
 	erb :'rounds/show'
-	@round = Round.find(params[:id])
-	erb :'rounds/show'
 end
