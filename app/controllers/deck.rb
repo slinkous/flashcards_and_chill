@@ -49,9 +49,9 @@ end
 # deletes select deck
 delete '/decks/:id' do
   #find deck
-  @deck = Deck.find(params[:id])
+  deck = Deck.find(params[:id])
   #remove deck
-  @deck.destroy
+  deck.destroy
   # go back to list of decks
   redirect '/decks'
 end
