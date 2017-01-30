@@ -1,4 +1,5 @@
 get '/rounds' do
+	@rounds = Round.all
 	erb :'rounds/index'
 end
 
@@ -13,4 +14,9 @@ post '/rounds' do
 	else
 		redirect '/decks'
 	end
+end
+
+get '/rounds/:id' do
+	@round = Round.find(:id)
+	erb :'rounds/show'
 end
