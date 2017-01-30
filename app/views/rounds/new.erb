@@ -1,0 +1,9 @@
+<h2>Start a new round!<h2>
+<form action="/rounds" method="post">
+Choose a deck: 
+<select name="id">
+<% decks = Deck.all %>
+<% decks.each do |deck| %>
+<option value="<%=deck.id%>"><%= deck.title %></option>
+<% end %>
+</select>
