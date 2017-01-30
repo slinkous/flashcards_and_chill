@@ -5,4 +5,9 @@ class Deck < ActiveRecord::Base
   has_many :guesses, through: :rounds
 
   validates :title, presence: true
+
+  def top_card
+    @deck.cards.pop
+
+  end
 end

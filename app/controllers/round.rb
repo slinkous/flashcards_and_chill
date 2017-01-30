@@ -1,4 +1,5 @@
 get '/rounds' do
+	@rounds = Round.all
 	erb :'rounds/index'
 end
 
@@ -19,6 +20,6 @@ post '/rounds' do
 end
 
 get '/rounds/:id' do
-	@round = Round.find(params[:id])
+	@round = Round.find(:id)
 	erb :'rounds/show'
 end
